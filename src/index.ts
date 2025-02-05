@@ -1,12 +1,12 @@
 // Add imports for needed packages
 import inquirer from 'inquirer';
+import { pool, connectToDb } from './connection.js';
 // inquirer for questions
-// import questions from 'questions';
 // import db connection 
+ 
 
 // write the questions 
-inquirer
-    .prompt([
+const questions =[
         {
             type: 'input',
             name: 'name',
@@ -23,9 +23,10 @@ inquirer
             message: 'What is the salary of the role?',
         },
         {
-           type: 'input',
+           type: 'list',
            name: 'department',
            message: 'Which department does the role belong to?',
+           choices: ['Engineering', 'Finance', 'Legal', 'Sales'],
         },
         {
             type: 'input',
@@ -33,10 +34,8 @@ inquirer
             message: 'Who is manager?',
         },
 
-    ])
+    ];
 // give the question to inquirer
-// .then((reponse)=> console.log(colors[response.color](response.text))):
-// put the answers into the db
 // ask what task they want to do 
 inquirer
       .prompt([
@@ -56,3 +55,15 @@ inquirer
           ],
         },
       ])
+      .then((answers) => {
+        console.log(answers);
+        // ask more questions or run database queries based on answers they pick 
+        if (answers.action === 'Quit') {
+            console.log('Goodbye');
+            process.exit(0);
+        } else if ()
+      })
+      .catch((err)=> {
+        console.error(err);
+      });
+      // put the answers into the db

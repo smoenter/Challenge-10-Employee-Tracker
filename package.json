@@ -7,6 +7,7 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "npm run build && node dist/index.js",
     "start": "node dist/index.js"
   },
   "keywords": [],
@@ -14,6 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^12.3.3",
+    "pg": "^8.13.1",
     "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.11"
   }
 }

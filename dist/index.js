@@ -1,21 +1,36 @@
 // Add imports for needed packages
 import inquirer from 'inquirer';
-// inquirer for questions
-// import questions from 'questions';
 // import db connection 
 // write the questions 
-// inquirer
-//     .prompt([
-//         {
-//         },
-//         {
-//         },
-//         {
-//         },
-//     ])
+const questions = [
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of the department?',
+    },
+    {
+        type: 'input',
+        name: 'role',
+        message: 'Waht is the name of the role?',
+    },
+    {
+        type: 'number',
+        name: 'salary',
+        message: 'What is the salary of the role?',
+    },
+    {
+        type: 'list',
+        name: 'department',
+        message: 'Which department does the role belong to?',
+        choices: ['Engineering', 'Finance', 'Legal', 'Sales'],
+    },
+    {
+        type: 'input',
+        name: 'manager',
+        message: 'Who is manager?',
+    },
+];
 // give the question to inquirer
-// .then((reponse)=> console.log(colors[response.color](response.text))):
-// put the answers into the db
 // ask what task they want to do 
 inquirer
     .prompt([
@@ -34,4 +49,16 @@ inquirer
             'Quit',
         ],
     },
-]);
+])
+    .then((answers) => {
+    console.log(answers);
+    // ask more questions or run database queries based on answers they pick 
+    if (answers.action === 'Quit') {
+        console.log('Goodbye');
+        process.exit(0);
+    }
+})
+    .catch((err) => {
+    console.error(err);
+});
+// put the answers into the db
