@@ -1,0 +1,4 @@
+DB_USER=Postgres
+DB_HOST=localhost
+DB_NAME=employee_tracker_db
+DB_PORT=5432 
