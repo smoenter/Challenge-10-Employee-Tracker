@@ -19,7 +19,7 @@ CREATE TABLE role (
     title VARCHAR(30) UNIQUE NOT NULL,
     department_id INTEGER NOT NULL,
     salary DECIMAL NOT NULL
-   );
+);
 
 CREATE TABLE employee (
     id SERIAL PRIMARY KEY,
