@@ -161,7 +161,7 @@ const questions = async () => {
             choices: [
                 'View all departments',
                 'View all roles',
-                'View all emplyoyees',
+                'View all employees',
                 'Add a department',
                 'Add a role',
                 'Add an employee',
