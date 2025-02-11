@@ -15,7 +15,7 @@ Employee Tracker is a command-line application that allows users to manage a com
 
 ## Link
 - Github: https://github.com/smoenter/Challenge-10-Employee-Tracker
-- https://drive.google.com/file/d/17BuWo0ljG0Yrh1bVPwK7EwRsOjj542UC/view?usp=drive_link
+- https://drive.google.com/file/d/12EHGJ_ElLiEIW-kca9DhWpWugd7K7A91/view?usp=drive_link
 
 ## Installation
 1. Clone the repository
